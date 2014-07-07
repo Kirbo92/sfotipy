@@ -1,2 +1,116 @@
-h1
-	color green
+@import "normalize.styl"
+@import "iconfonts.styl"
+
+gris_oscuro = #333333
+gris_claro = #818181
+rojo = #BD255B
+
+
+a
+	text-decoration none
+body
+	font-size 16px
+	font-family 'Varela Round', sans-serif
+figure
+	margin 0
+img
+	vertical-align top
+.action
+	color white
+	font-size 1.2em
+	margin-right .5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_oscuro
+.actions
+	background rgba(black, .3)
+	bottom 0
+	left 0
+	position absolute
+	right 0
+.author
+	color gris_claro
+.border-bottom
+	border-bottom 1px solid gris_claro
+.button-menu
+	color gris_oscuro
+	left .5em
+	margin-top -10px
+	position absolute
+	top 50%
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.container
+	font-size 0
+	padding 1.4rem
+	text-align center
+.header
+	height 3.5em
+	.title
+		font-size 1.1em
+		line-height 3.5em
+		margin 0
+		text-align center
+
+.name
+	color gris_oscuro
+.menu
+	display none
+.padding
+	padding 1em
+.playing
+	&.small
+		width 20em
+.progress
+	margin 1em 0
+	position relative
+	.circle
+		width 10px
+		height 10px
+		background gris_oscuro
+		border-radius 50%
+		position absolute
+		right 0
+		top -2px
+	.max
+	.min
+		font-size .8em
+		position absolute
+		top -5px
+	.max
+		right 0
+	.min
+		left 0
+	.total
+		height 5px
+		background gris_claro
+		width 75%
+		border-radius 5px
+		margin 0 auto
+	.state
+		height 5px
+		background rojo
+		width 30%
+		border-radius 5px
+		position relative
+	
+.relative //oocss
+	position relative
+.right-text
+	text-align right
+.song
+	display inline-block
+	font-size 1rem
+	margin-bottom 1em
+	margin-right 1em
+	text-align left
+	width 8rem
+	&:nth-child(even)
+		margin 0
+	p
+		margin .5em 0
+
+
