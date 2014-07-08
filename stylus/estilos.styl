@@ -54,11 +54,12 @@ img
 		line-height 3.5em
 		margin 0
 		text-align center
-
-.name
-	color gris_oscuro
+.left
+	float left
 .menu
 	display none
+.name
+	color gris_oscuro
 .padding
 	padding 1em
 .playing
@@ -99,6 +100,8 @@ img
 	
 .relative //oocss
 	position relative
+.right
+	float right
 .right-text
 	text-align right
 .song
@@ -112,5 +115,32 @@ img
 		margin 0
 	p
 		margin .5em 0
+.wrap
+	width 1000px
+
+@media screen and (min-width:480px)
 
 
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			width auto
+	.song
+		&:nth-child(even)
+			margin-right 1em
+
+@media screen and (min-width:1000px)
+	.button-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+	.isotipo
+		width 122px
+	.logo
+		padding 1.3em 0
+		overflow hidden
