@@ -1,5 +1,10 @@
+@import "nib"
 @import "normalize.styl"
 @import "iconfonts.styl"
+
+vendor-prefixes = webkit o ms moz official
+// animacion(parametro)
+// 	-webkit-animation parametro
 
 gris_oscuro = #333333
 gris_claro = #818181
@@ -113,6 +118,7 @@ ul
 		position absolute
 		right 0
 		top -2px
+		animation 1s circle infinite
 	.max
 	.min
 		font-size .8em
@@ -134,6 +140,7 @@ ul
 		width 30%
 		border-radius 5px
 		position relative
+		animation 20s state infinite linear
 	
 .relative //oocss
 	position relative
@@ -177,6 +184,18 @@ ul
 .wrap
 	width 62.5em
 
+@keyframes state
+	from
+		width 0
+	to
+		width 100%
+@keyframes circle
+	0%
+		transform scale(1)
+	100%
+		transform scale(2)
+		opacity 0
+
 @media screen and (min-width:480px)
 	.image
 		img
@@ -214,6 +233,7 @@ ul
 				display inline-block
 				padding 1em
 				text-transform uppercase
+				transition .3s border-top
 				&:hover
 					border-top 5px solid gris_claro
 	.music
