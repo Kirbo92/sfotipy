@@ -7,8 +7,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
 
+<body>
 	<header class="header relative border-bottom">
 		<div class="logo">
 			<div class="wrap center-block">
@@ -92,9 +92,9 @@
 					</p>
 				</div>
 				<div class="play center-text padding">
-					<a href="" class="action gray icon-prev"></a>
-					<a href="" class="action gray icon-play"></a>
-					<a href="" class="action gray icon-next"></a>
+					<a href="" class="action gray icon-prev" id="prev"></a>
+					<a href="" class="action gray icon-play" id="play"></a>
+					<a href="" class="action gray icon-next" id="next"></a>
 					<a href="" class="action gray icon-random"></a>
 					<a href="" class="action gray icon-vol"></a>
 				</div>
@@ -161,140 +161,27 @@
 		</div>
 	</section>
 
-	<section class="container">
-		<article class="song">
+	<section class="container" id="list">
+	<script type="html/x-handlebars" id="song-tmpl">
+		{{#each songs}}
+		<article class="song" data-id="{{@index}}">
 			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
+				<img src="{{img}}" width="128" height="128" alt="{{artist}}">
 			</figure>
 			<p class="name">
-				Girl
+				{{name}}
 			</p>
 			<p class="author">
-				Pharrell Williams
+				{{artist}}
 			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
-		<article class="song">
-			<figure class="image">
-				<img src="img/songs/test.jpg" width="128" height="128" alt="Girl Pharrell Williams">
-			</figure>
-			<p class="name">
-				Girl
-			</p>
-			<p class="author">
-				Pharrell Williams
-			</p>
-		</article>
+			</article>
+			{{/each}}
+	</script>
 	</section>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/lib/handlebars.js"></script>
+	<script src="js/lib/observable.js"></script>
+	<script src="js/player-mvc.js"></script>
 
 </body>
 </html>
